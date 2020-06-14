@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r, echo=TRUE, warning=FALSE}
 #1. Code for reading in the dataset and processing the data
-activity <- read.csv(".\\data\\activity.csv", sep=",", header=TRUE)
+activity <- read.csv(".\\activity.csv", sep=",", header=TRUE)
 ```
 
 ```{r plot, echo=TRUE, warning=FALSE}

@@ -1,5 +1,5 @@
     #1. Code for reading in the dataset and processing the data
-    activity <- read.csv(".\\data\\activity.csv", sep=",", header=TRUE)
+    activity <- read.csv(".\\activity.csv", sep=",", header=TRUE)
 
     #2. Histogram of the total number of steps taken each day
 
@@ -11,7 +11,7 @@
                                 , main = "Total Daily Steps"
                                 , xlab="Daily Steps")  
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](PA1_template_files/figure-markdown_strict/plot-1.png)
 
     #3. Mean and median steps taken each day
     mean_steps <- summarize(group_by(activity, date), mean_steps=mean(steps))
@@ -22,7 +22,7 @@
     plot(interval_avg_steps, type= "line", col=4, main="Time Series plot of average steps",
          xlab="Time",ylab="Average Number of Steps")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
     #5. The five minute interval that on average, contains the maximum number of steps
     max(interval_avg_steps$avg_steps)
@@ -54,7 +54,7 @@
          , main = "Total Daily Steps after imputation of NAs"
          , xlab="Daily Steps")  
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
     # 8. Panel plot comparing the average number of steps taken per 5-minute interval 
     #    across weekdays and weekends
@@ -73,4 +73,4 @@
     plot(mean_steps_we$interval, mean_steps_we$mean_steps, type="line"
                                 ,main="Weekends", xlab="Interval", ylab="Average Steps")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-7-1.png)
